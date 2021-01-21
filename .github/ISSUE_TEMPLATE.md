@@ -1,6 +1,5 @@
-- FACT-Finder plugin version: 
-- Shopware version: 
 - PHP version: 
+- FACT-Finder® version: 
 - Expected behavior: 
 - Actual behavior: 
 - Steps to reproduce: 
