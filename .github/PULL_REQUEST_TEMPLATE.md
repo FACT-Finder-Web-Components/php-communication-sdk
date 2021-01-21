@@ -1,4 +1,4 @@
-- Closes: #
+- Closes #
 - Description: 
-- Tested with Shopware version(s): 
 - Tested with PHP version(s): 
+- Tested with FACT-Finder® version(s): 
