@@ -21,7 +21,7 @@ class ImportAdapter implements Import
     {
         $params   = ['channel' => $channel] + $params;
         $response = $this->client->request('POST', "rest/v4/import/{$type}", ['query' => $params]);
-        return json_decode((string) $response->getBody(), true);
+        return (array) json_decode((string) $response->getBody(), true);
     }
 
     public function running(string $channel): bool
