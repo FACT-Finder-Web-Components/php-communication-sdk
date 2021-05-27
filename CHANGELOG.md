@@ -9,5 +9,5 @@
 - Client builder, according to FF version
 - Import, Search, and Tracking adapters
 
-[v0.9]:   https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9
+[v0.9]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9
 [v0.9.1]:   https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.1
