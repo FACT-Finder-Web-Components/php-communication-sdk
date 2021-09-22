@@ -1,4 +1,9 @@
 # Changelog
+## Unreleased
+### Fixed
+- Import
+    - Standard adapter does not use query parameters
+
 ## [v0.9.1] - 2021.04.07
 ### Fixed
 - Import

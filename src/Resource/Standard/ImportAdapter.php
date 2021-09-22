@@ -21,7 +21,7 @@ class ImportAdapter implements Import
     public function import(string $channel, string $type, array $params = []): array
     {
         $params = ['channel' => $channel, 'type' => ['search' => 'data'][$type] ?? $type, 'format' => 'json'] + $params;
-        $resp   = $this->client->request('GET', 'Import.ff', $params);
+        $resp   = $this->client->request('GET', 'Import.ff', ['query' => $params]);
         return json_decode((string) $resp->getBody(), true);
     }
 
