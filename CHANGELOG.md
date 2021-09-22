@@ -1,5 +1,5 @@
 # Changelog
-## Unreleased
+## [v0.9.2] - 2021.09.22
 ### Fixed
 - Import
     - Standard adapter does not use query parameters
@@ -15,4 +15,5 @@
 - Import, Search, and Tracking adapters
 
 [v0.9]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9
-[v0.9.1]:   https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.1
+[v0.9.1]:   https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.
+[v0.9.2]:   https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.2
