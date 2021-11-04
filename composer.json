@@ -10,7 +10,7 @@
     }
   ],
   "require": {
-    "php": "^7.1",
+    "php": ">=7.1",
     "ext-json": "*",
     "guzzlehttp/guzzle": "^6.3|^7.0",
     "psr/http-client": "^1.0",
