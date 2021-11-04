@@ -1,4 +1,9 @@
 # Changelog
+## [v0.9.3] - 2021.11.04
+### Changed
+ Compatibility
+  - Declare PHP8.0 compatibility
+
 ## [v0.9.2] - 2021.09.22
 ### Fixed
 - Import
@@ -17,3 +22,4 @@
 [v0.9]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9
 [v0.9.1]:   https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.
 [v0.9.2]:   https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.2
+[v0.9.3]:   https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.3
