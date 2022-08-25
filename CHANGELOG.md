@@ -1,4 +1,9 @@
 # Changelog
+## [v0.9.4] - 2022.08.25
+### Changed
+ Compatibility
+  - Declare PHP8.1 compatibility
+
 ## [v0.9.3] - 2021.11.04
 ### Changed
  Compatibility
@@ -19,6 +24,10 @@
 - Client builder, according to FF version
 - Import, Search, and Tracking adapters
 
+[v0.9.4]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.4
+[v0.9.3]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.3
+[v0.9.2]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.2
+[v0.9.1]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.1
 [v0.9]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9
 [v0.9.1]:   https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.
 [v0.9.2]:   https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.2
