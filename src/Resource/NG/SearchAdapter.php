@@ -12,15 +12,21 @@ class SearchAdapter implements Search
     /** @var ClientInterface */
     private $client;
 
-    public function __construct(ClientInterface $client)
-    {
+    /** @var array */
+    private $config;
+
+    public function __construct(
+        ClientInterface $client,
+        array $config = []
+    ) {
         $this->client = $client;
+        $this->config = $config;
     }
 
     public function search(string $channel, string $query, array $params = []): array
     {
         $params   = ['query' => $query] + $params;
-        $apiVersion = $this->client->getApiVersion();
+        $apiVersion = $this->getApiVersion();
         $response = $this->client->request('GET', "rest/{$apiVersion}/search/{$channel}", ['query' => $params]);
         return (array) json_decode((string) $response->getBody(), true);
     }
@@ -28,8 +34,13 @@ class SearchAdapter implements Search
     public function suggest(string $channel, string $query, array $params = []): array
     {
         $params   = ['query' => $query] + $params;
-        $apiVersion = $this->client->getApiVersion();
+        $apiVersion = $this->getApiVersion();
         $response = $this->client->request('GET', "rest/{$apiVersion}/suggest/{$channel}", ['query' => $params]);
         return (array) json_decode((string) $response->getBody(), true);
+    }
+
+    private function getApiVersion(): string
+    {
+        return (string) $this->config['api_version'] ?? 'v4';
     }
 }

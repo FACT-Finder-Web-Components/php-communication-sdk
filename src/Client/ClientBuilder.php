@@ -25,9 +25,6 @@ class ClientBuilder
     /** @var string */
     private $version = Version::NG;
 
-    /** @var string */
-    private $apiVersion;
-
     public function withServerUrl(string $serverUrl): ClientBuilder
     {
         $this->serverUrl = (string) new ServerUrl($serverUrl);
@@ -37,12 +34,6 @@ class ClientBuilder
     public function withCredentials(Credentials $credentials): ClientBuilder
     {
         $this->credentials = $credentials;
-        return $this;
-    }
-
-    public function withApiVersion(string $apiVersion): ClientBuilder
-    {
-        $this->apiVersion = $apiVersion;
         return $this;
     }
 

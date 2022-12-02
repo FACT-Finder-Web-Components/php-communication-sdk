@@ -16,28 +16,37 @@ class AdapterFactory
     /** @var string */
     private $version;
 
-    public function __construct(ClientBuilder $clientBuilder, string $version = Version::NG)
-    {
+    /** @var array */
+    private $config;
+
+    public function __construct(
+        ClientBuilder $clientBuilder,
+        string $version = Version::NG,
+        string $apiVersion = 'v4'
+    ) {
         $this->clientBuilder = $clientBuilder;
         $this->version       = $version;
+        $this->config        = [
+            'api_version' => $apiVersion,
+        ];
     }
 
     public function getImportAdapter(): Import
     {
         $class = $this->getAdapterClass(Import::class, $this->version);
-        return new $class($this->getClient());
+        return new $class($this->getClient(), $this->config);
     }
 
     public function getSearchAdapter(): Search
     {
         $class = $this->getAdapterClass(Search::class, $this->version);
-        return new $class($this->getClient());
+        return new $class($this->getClient(), $this->config);
     }
 
     public function getTrackingAdapter(): Tracking
     {
         $class = $this->getAdapterClass(Tracking::class, $this->version);
-        return new $class($this->getClient());
+        return new $class($this->getClient(), $this->config);
     }
 
     private function getAdapterClass(string $resource, string $version): string
