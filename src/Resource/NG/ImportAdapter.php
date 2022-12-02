@@ -25,16 +25,16 @@ class ImportAdapter implements Import
 
     public function import(string $channel, string $type, array $params = []): array
     {
-        $params   = ['channel' => $channel] + $params;
+        $params     = ['channel' => $channel] + $params;
         $apiVersion = $this->getApiVersion();
-        $response = $this->client->request('POST', "rest/{$apiVersion}/import/{$type}", ['query' => $params]);
+        $response   = $this->client->request('POST', "rest/{$apiVersion}/import/{$type}", ['query' => $params]);
         return (array) json_decode((string) $response->getBody(), true);
     }
 
     public function running(string $channel): bool
     {
         $apiVersion = $this->getApiVersion();
-        $response = $this->client->request('GET', "rest/{$apiVersion}/import/running", ['query' => ['channel' => $channel]]);
+        $response   = $this->client->request('GET', "rest/{$apiVersion}/import/running", ['query' => ['channel' => $channel]]);
         return (bool) json_decode((string) $response->getBody(), true);
     }
 
