@@ -25,4 +25,6 @@ interface ClientInterface extends \Psr\Http\Client\ClientInterface
      * @throws ClientExceptionInterface
      */
     public function request(string $method, $uri, array $options = []): ResponseInterface;
+
+    public function getApiVersion(): string;
 }

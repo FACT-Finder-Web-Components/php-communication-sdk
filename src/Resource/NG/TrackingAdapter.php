@@ -20,7 +20,8 @@ class TrackingAdapter implements Tracking
     public function track(string $channel, string $event, array $eventData = []): array
     {
         $params   = ['body' => json_encode($eventData), 'headers' => ['Content-Type' => 'application/json']];
-        $response = $this->client->request('POST', "rest/v4/track/{$channel}/{$event}", $params);
+        $apiVersion = $this->client->getApiVersion();
+        $response = $this->client->request('POST', "rest/{$apiVersion}/track/{$channel}/{$event}", $params);
         return json_decode((string) $response->getBody(), true) ?? [];
     }
 }

@@ -19,9 +19,13 @@ class Client implements ClientInterface
     /** @var HttpClient */
     private $client;
 
+    /** @var string */
+    private $apiVersion;
+
     public function __construct(array $config = [])
     {
         $this->client = new HttpClient($config);
+        $this->apiVersion = (string) $config['api_version'] ?? 'v4';
     }
 
     public function sendRequest(RequestInterface $request): ResponseInterface
@@ -32,5 +36,10 @@ class Client implements ClientInterface
     public function request(string $method, $uri, array $options = []): ResponseInterface
     {
         return $this->client->request($method, $uri, $options);
+    }
+
+    public function getApiVersion(): string
+    {
+        return $this->apiVersion;
     }
 }

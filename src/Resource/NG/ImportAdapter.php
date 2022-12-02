@@ -20,13 +20,15 @@ class ImportAdapter implements Import
     public function import(string $channel, string $type, array $params = []): array
     {
         $params   = ['channel' => $channel] + $params;
-        $response = $this->client->request('POST', "rest/v4/import/{$type}", ['query' => $params]);
+        $apiVersion = $this->client->getApiVersion();
+        $response = $this->client->request('POST', "rest/{$apiVersion}/import/{$type}", ['query' => $params]);
         return (array) json_decode((string) $response->getBody(), true);
     }
 
     public function running(string $channel): bool
     {
-        $response = $this->client->request('GET', 'rest/v4/import/running', ['query' => ['channel' => $channel]]);
+        $apiVersion = $this->client->getApiVersion();
+        $response = $this->client->request('GET', "rest/{$apiVersion}/import/running", ['query' => ['channel' => $channel]]);
         return (bool) json_decode((string) $response->getBody(), true);
     }
 }
