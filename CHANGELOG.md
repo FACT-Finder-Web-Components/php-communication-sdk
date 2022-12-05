@@ -1,4 +1,9 @@
 # Changelog
+## Unreleased
+### Add
+ AdapterFactory
+- add config
+
 ## [v0.9.4] - 2022.08.25
 ### Changed
  Compatibility
