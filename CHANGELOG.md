@@ -1,5 +1,5 @@
 # Changelog
-## Unreleased
+## [v0.9.6] - 2023.01.24
 SearchAdapter
 - Extend Search interface by records method
 
@@ -33,6 +33,7 @@ SearchAdapter
 - Client builder, according to FF version
 - Import, Search, and Tracking adapters
 
+[v0.9.6]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.6
 [v0.9.5]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.5
 [v0.9.4]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.4
 [v0.9.3]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.3
