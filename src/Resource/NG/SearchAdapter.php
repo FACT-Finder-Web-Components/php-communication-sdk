@@ -39,6 +39,14 @@ class SearchAdapter implements Search
         return (array) json_decode((string) $response->getBody(), true);
     }
 
+    public function records(string $channel, string $query, array $params = []): array
+    {
+        $params     = ['query' => $query] + $params;
+        $apiVersion = $this->getApiVersion();
+        $response   = $this->client->request('GET', "rest/{$apiVersion}/records/{$channel}", ['query' => $params]);
+        return (array) json_decode((string) $response->getBody(), true);
+    }
+
     private function getApiVersion(): string
     {
         return (string) $this->config['api_version'] ?? 'v4';
