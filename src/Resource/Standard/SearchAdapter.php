@@ -30,4 +30,11 @@ class SearchAdapter implements Search
         $response = $this->client->request('GET', 'Suggest.ff', ['query' => $params]);
         return json_decode((string) $response->getBody(), true);
     }
+
+    public function records(string $channel, string $query, array $params = []): array
+    {
+        $params   = ['query' => $query, 'channel' => $channel, 'format' => 'json'] + $params;
+        $response = $this->client->request('GET', 'Records.ff', ['query' => $params]);
+        return json_decode((string) $response->getBody(), true);
+    }
 }

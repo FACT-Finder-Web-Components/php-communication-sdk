@@ -1,4 +1,8 @@
 # Changelog
+## Unreleased
+SearchAdapter
+- Extend Search interface by records method
+
 ## [v0.9.5] - 2022.12.05
 ### Add
  AdapterFactory
