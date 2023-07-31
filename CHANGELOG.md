@@ -1,5 +1,5 @@
 # Changelog
-## Unreleased
+## [v0.9.7] - 2023.07.31
 ### Changed
 Compatibility
 - Declare psr/log v3.0 compatibility
@@ -38,6 +38,7 @@ SearchAdapter
 - Client builder, according to FF version
 - Import, Search, and Tracking adapters
 
+[v0.9.7]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.7
 [v0.9.6]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.6
 [v0.9.5]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.5
 [v0.9.4]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.4
