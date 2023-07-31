@@ -1,4 +1,9 @@
 # Changelog
+## Unreleased
+### Changed
+Compatibility
+- Declare psr/log v3.0 compatibility
+
 ## [v0.9.6] - 2023.01.24
 SearchAdapter
 - Extend Search interface by records method
