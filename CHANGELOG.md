@@ -1,4 +1,9 @@
 # Changelog
+### Unreleased
+### Changed
+Compatibility
+- Declare PHP8.2 and PHP8.3 compatibility
+
 ## [v0.9.7] - 2023.07.31
 ### Changed
 Compatibility
