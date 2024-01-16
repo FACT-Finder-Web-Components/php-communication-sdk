@@ -9,7 +9,7 @@ handled by an HTTP client which is PSR-18 compatible. Behind the scenes, we use
 GuzzleHTTP, a de-facto industry standard library for HTTP communication.
 
 ## Requirements
-- PHP 7.x or 8.1.x
+- PHP 7.x or 8.x
 - FACT-Finder® 7.x or FACT-Finder® NG
 
 ## License
