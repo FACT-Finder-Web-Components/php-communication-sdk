@@ -25,6 +25,9 @@ class ClientBuilder
     /** @var string */
     private $version = Version::NG;
 
+    /** @var string */
+    private $apiKey = '';
+
     public function withServerUrl(string $serverUrl): ClientBuilder
     {
         $this->serverUrl = (string) new ServerUrl($serverUrl);
@@ -34,6 +37,13 @@ class ClientBuilder
     public function withCredentials(Credentials $credentials): ClientBuilder
     {
         $this->credentials = $credentials;
+        return $this;
+    }
+
+    public function withApiKey(string $apiKey): ClientBuilder
+    {
+        $this->apiKey = $apiKey;
+
         return $this;
     }
 
@@ -60,6 +70,12 @@ class ClientBuilder
 
     private function ngConfig(array $config): array
     {
+        if (!empty($this->apiKey)) {
+            $config['headers']['X-FF-API-Key'] = $this->apiKey;
+
+            return $config;
+        }
+
         return ['auth' => $this->credentials->getAuth()] + $config;
     }
 

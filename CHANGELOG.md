@@ -1,4 +1,8 @@
 # Changelog
+## Unreleased
+### Added
+- Add support to API key authorization
+
 ## [v0.9.8] - 2024.01.16
 ### Changed
 Compatibility
