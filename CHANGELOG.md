@@ -1,5 +1,5 @@
 # Changelog
-## Unreleased
+## [v0.9.9] - 2024.06.06
 ### Added
 - Add support to API key authorization
 
@@ -47,6 +47,7 @@ SearchAdapter
 - Client builder, according to FF version
 - Import, Search, and Tracking adapters
 
+[v0.9.9]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.9
 [v0.9.8]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.8
 [v0.9.7]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.7
 [v0.9.6]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.6
@@ -55,7 +56,4 @@ SearchAdapter
 [v0.9.3]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.3
 [v0.9.2]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.2
 [v0.9.1]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.1
-[v0.9]:     https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9
-[v0.9.1]:   https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.
-[v0.9.2]:   https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.2
-[v0.9.3]:   https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9.3
+[v0.9]:       https://github.com/FACT-Finder-Web-Components/php-communication-sdk/releases/tag/v0.9
