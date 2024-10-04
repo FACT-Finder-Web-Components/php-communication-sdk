@@ -1,22 +1,31 @@
 <?php
 
-use PhpCsFixer\Config;
+declare(strict_types=1);
 
-$finder = PhpCsFixer\Finder::create()
-    ->in(__DIR__ . '/spec')
+use PhpCsFixer\Config;
+use PhpCsFixer\Finder;
+
+$finder = Finder::create()
     ->in(__DIR__ . '/src')
     ->name('*.php')
     ->ignoreDotFiles(true)
     ->ignoreVCS(true);
 
-return Config::create()
+$config = new Config();
+
+return $config
     ->setRiskyAllowed(true)
     ->setHideProgress(true)
     ->setUsingCache(false)
     ->setRules([
         '@PSR2' => true,
         'array_syntax' => ['syntax' => 'short'],
-        'binary_operator_spaces' => ['align_double_arrow' => true, 'align_equals' => true],
+        'binary_operator_spaces'       => [
+            'operators' => [
+                '='  => 'align',
+                '=>' => 'align',
+            ],
+        ],
         'blank_line_after_opening_tag' => true,
         'blank_line_before_statement' => ['statements' => ['break', 'continue', 'declare', 'try']],
         'concat_space' => ['spacing' => 'one'],

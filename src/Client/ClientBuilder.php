@@ -62,6 +62,7 @@ class ClientBuilder
             'base_uri'    => $this->serverUrl,
             'handler'     => $handler,
             'headers'     => ['Accept' => 'application/json'],
+            'timeout'     => 10,
             'http_errors' => false,
         ];
 
