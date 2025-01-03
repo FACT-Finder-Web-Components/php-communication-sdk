@@ -33,6 +33,6 @@ class TrackingAdapter implements Tracking
 
     private function getApiVersion(): string
     {
-        return (string) $this->config['api_version'] ?? 'v4';
+        return (string) ($this->config['api_version'] ?? 'v4');
     }
 }
