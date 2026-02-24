@@ -12,7 +12,7 @@ class QueryArrayNormalizer
     {
         return function (RequestInterface $request, array $options) use ($handler) {
 
-            $uri = $request->getUri();
+            $uri   = $request->getUri();
             $query = $uri->getQuery();
 
             if (!$query) {
@@ -28,9 +28,11 @@ class QueryArrayNormalizer
                     foreach ($value as $v) {
                         $normalized[] = rawurlencode($key) . '=' . rawurlencode((string) $v);
                     }
-                } else {
-                    $normalized[] = rawurlencode($key) . '=' . rawurlencode((string) $value);
+
+                    continue;
                 }
+
+                $normalized[] = rawurlencode($key) . '=' . rawurlencode((string) $value);
             }
 
             $newQuery = implode('&', $normalized);
