@@ -28,7 +28,7 @@
   },
   "scripts": {
     "test": [
-      "php-cs-fixer fix --dry-run -v",
+      "php-cs-fixer fix -v",
       "phpmd src text phpmd.xml.dist",
       "phpspec run --format=dot"
     ]
