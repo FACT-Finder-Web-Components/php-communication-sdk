@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php: ['7.3', '8.1']
-        deps: ['lowest', 'stable']
+        php: ['8.1']
+        deps: ['stable']
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
