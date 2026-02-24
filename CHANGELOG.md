@@ -1,4 +1,8 @@
 # Changelog
+## Unreleased
+### BREAKING
+- Add QueryArrayNormalizer middleware to ClientBuilder
+
 ## [v0.9.9] - 2024.06.06
 ### Added
 - Add support to API key authorization

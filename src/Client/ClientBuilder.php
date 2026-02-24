@@ -7,6 +7,7 @@ namespace Omikron\FactFinder\Communication\Client;
 use GuzzleHttp\HandlerStack;
 use Omikron\FactFinder\Communication\Client\Middleware\Authenticator;
 use Omikron\FactFinder\Communication\Client\Middleware\HttpErrors;
+use Omikron\FactFinder\Communication\Client\Middleware\QueryArrayNormalizer;
 use Omikron\FactFinder\Communication\Credentials;
 use Omikron\FactFinder\Communication\ServerUrl;
 use Omikron\FactFinder\Communication\Version;
@@ -57,6 +58,7 @@ class ClientBuilder
     {
         $handler = HandlerStack::create();
         $handler->push(new HttpErrors());
+        $handler->push(new QueryArrayNormalizer());
 
         $config = [
             'base_uri'    => $this->serverUrl,
